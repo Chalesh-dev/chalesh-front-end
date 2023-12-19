@@ -1,6 +1,6 @@
 const { color } = require("framer-motion");
 
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     // Or if using `src` directory:
@@ -8,12 +8,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        mont: ["var(--font-mont)"],
-      },
-      colors: {
-        name: color,
-      },
+      // fontFamily: {
+      //   mont: ["var(--font-mont)"],
+      // },
+      // colors: {
+      //   name: color,
+      // },
     },
   },
   plugins: [],
