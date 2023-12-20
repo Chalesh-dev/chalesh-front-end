@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Tabs = () => {
   return (
-    <div className="flex gap-8 items-center text-white text-[15px]">
+    <div className="gap-7 items-center text-white text-[15px] md:flex hidden">
       <Link href="/">Solution</Link>
       <Link href="/">Product</Link>
       <Link href="/">Blog</Link>
