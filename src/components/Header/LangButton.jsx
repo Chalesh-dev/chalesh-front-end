@@ -13,7 +13,9 @@ const LangButton = () => {
   };
 
   const handleMouseLeave = () => {
-    setIsDropDown(false);
+    setTimeout(() => {
+      setIsDropDown(false);
+    }, 500);
   };
 
   const handleChangeEn = () => {
@@ -26,11 +28,13 @@ const LangButton = () => {
     setEnActive(false);
   };
 
-  const classes = `flex justify-center items-center mt-10 gap-2 duration-200`;
+  const classes = `flex justify-center items-center gap-2 duration-200 mt-[12px] ${
+    isDropDown && '!border-slate-500 shadow'
+  }`;
 
   return (
     <div
-      className="relative h-[62%] mt-[6px] hidden md:block"
+      className="relative hidden md:block h-[70px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -39,7 +43,10 @@ const LangButton = () => {
         En
       </ButtonCustom>
       {isDropDown && (
-        <div className="bg-[#E5E7EB] opacity-[0.9] absolute top-[90px] px-[15px] py-[20px] z-20 border border-slate-700 rounded-2xl w-[170px] h-auto shadow-sm shadow-slate-400 flex flex-col gap-4">
+        <div
+          onMouseLeave={handleMouseLeave}
+          className="bg-[#E5E7EB] z-[900000] opacity-[0.9] absolute top-[62px] px-[15px] py-[20px] border border-slate-700 rounded-2xl w-[170px] h-[145px] shadow-sm shadow-slate-400 flex flex-col gap-4"
+        >
           <div
             className="flex gap-3 items-center cursor-pointer border border-transparent hover:border-slate-400 rounded-md px-[0.4rem] p-1"
             onClick={handleChangeEn}
