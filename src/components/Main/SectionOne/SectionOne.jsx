@@ -1,19 +1,24 @@
+import ContentLeft from "./ContentLeft";
+import ContentRight from "./ContentRight";
+
 const SectionOne = () => {
   // bg-[url('/images/Main/ImgBackgroundSectionOne.svg')]
+  // from-[#06051a] from-[90%] to-[#4338CA] bg-gradient-to-tr
   return (
-    <div className="bg-gradient-to-r from-[#1E1B4B] from-70% to-[#4338CA]">
+    <div className="">
       <div
-        className="px-[8.5%] h-[679px] w-full flex "
+        className="px-[8.5%] h-[679px] w-full flex"
         style={{
           backgroundImage: "url('/images/Main/ImgBackgroundSectionOne.svg')",
           backgroundSize: "",
-          zIndex:"100000",
-          position:"relative",
+          zIndex: "100000",
+          position: "relative",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        dfddffffffffff
+        <ContentLeft />
+        <ContentRight />
       </div>
     </div>
   );

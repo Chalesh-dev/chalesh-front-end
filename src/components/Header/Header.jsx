@@ -8,8 +8,8 @@ import MobileNavigation from "./MobileNavigation";
 
 const Header = () => {
   return (
-    // from-[#3B0764] to-90% to-[#9333EA]
-    <header className="w-full bg-slate-600 px-[8.5%] bg-gradient-to-r from-[#1E1B4B] from-70% to-[#4338CA] pt-10">
+    // bg-gradient-to-r from-[#06051a] from-60% to-[#4338CA]
+    <header className="w-full px-[8.5%] pt-10">
       <div className="h-[150px] w-full flex items-center justify-between">
       <div className="flex gap-5">
         <ImgComponent />

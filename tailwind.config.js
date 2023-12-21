@@ -8,12 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   mont: ["var(--font-mont)"],
-      // },
-      // colors: {
-      //   name: color,
-      // },
+      backgroundImage: {
+        // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        'gradient-radial': 'radial-gradient(circle_at_bottom, #4338CA, #1E1B4B, #4338CA)'
+      },
     },
   },
   plugins: [],
