@@ -13,9 +13,10 @@ const LangButton = () => {
   };
 
   const handleMouseLeave = () => {
-    setTimeout(() => {
-      setIsDropDown(false);
-    }, 500);
+    setIsDropDown(false);
+    // setTimeout(() => {
+    //   setIsDropDown(false);
+    // }, 500);
   };
 
   const handleChangeEn = () => {

@@ -13,12 +13,12 @@ const MobileNavigation = () => {
       <TiThMenu
         onClick={() => setShowNav((prew) => !prew)}
         size={25}
-        className="mt-10 cursor-pointer block md:hidden"
+        className="cursor-pointer block md:hidden"
       />
 
       {/* display mobile navigation */}
       {showNav && (
-        <div className="absolute top-0 right-0 w-[100vw] h-[100vh] bg-slate-50 flex flex-col">
+        <div className="z-[900000] fixed top-0 right-0 w-[100vw] min-h-screen h-[100dvh] bg-slate-50 flex flex-col">
           <div className="flex p-5 justify-between items-center border-b border-b-gray-300">
             <ImgComponent />
             <IoIosClose
