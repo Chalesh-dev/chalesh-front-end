@@ -9,7 +9,6 @@ export default function Home() {
         description="Explore wide variety of designs"
       />
       {/* main */}
-      <SectionOne />
     </>
   );
 }
