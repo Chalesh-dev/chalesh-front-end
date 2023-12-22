@@ -7,7 +7,7 @@ const SectionOne = () => {
   return (
     <div className="">
       <div
-        className="px-[8.5%] h-[679px] w-full flex"
+        className="px-[8.5%] min-h-[679px] h-auto w-full flex flex-col lg:flex-row lg:gap-0 gap-7 mb-5"
         style={{
           backgroundImage: "url('/images/Main/ImgBackgroundSectionOne.svg')",
           backgroundSize: "",

@@ -29,7 +29,7 @@ const LangButton = () => {
     setEnActive(false);
   };
 
-  const classes = `flex justify-center items-center gap-2 duration-200 mt-[12px] ${
+  const classes = `flex justify-center text-white items-center gap-2 duration-200 mt-[12px] ${
     isDropDown && '!border-slate-500 shadow'
   }`;
 
