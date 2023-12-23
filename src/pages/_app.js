@@ -1,11 +1,13 @@
 import Layout from "@/components/Layout";
 import "@/styles/globals.css";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Head from "next/head";
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-mont",
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default function App({ Component, pageProps }) {
@@ -17,7 +19,9 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <div className={poppins.className}>
+        <Component {...pageProps} />
+      </div>
     </Layout>
     // <>
     //   <Head>
