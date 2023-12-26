@@ -6,3 +6,16 @@
 /* Your custom styles go here */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins,wght@0,400;0,500;0,600;&display=swap");
+
+/** swiper styles **/
+
+.swiper{
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow-y: visible;
+    z-index: 5000000;
+    position: relative;
+}
+
+
