@@ -1,18 +1,25 @@
+import AnimatedText from "@/components/AnimatedText";
 import React from "react";
 
 const ContentText = () => {
   return (
     <>
-      <p className="mt-8 text-white font-bold lg:text-5xl md:text-6xl sm:text-5xl sm:font-bold text-2xl">
-        Unveiling Blockchain
-      </p>
-      <p className="text-white font-bold lg:text-5xl md:text-6xl mt-5 sm:text-5xl sm:font-bold text-2xl">
-        Potential boundaries
-      </p>
-      <p className="text-white font-normal text-sm sm:text-xl mt-14 leading-7 lg:text-left text-center">
-        Empower Your Journey with Mempool lnsights
-      </p>
-      <p className="text-white font-normal  text-sm sm:text-xl mt-8 leading-7 lg:text-left text-center">
+      <AnimatedText
+        text="Unveiling Blockchain"
+        className="lg:text-5xl md:text-6xl mt-7 sm:text-5xl sm:font-bold text-2xl lg:!text-left"
+      />
+      <AnimatedText
+        text="Potential boundaries"
+        className="lg:text-5xl md:text-6xl mt-4 sm:text-5xl sm:font-bold text-2xl lg:!text-left"
+      />
+      <AnimatedText
+        text="Empower Your Journey with Mempool Insights"
+        className="!font-normal text-sm sm:text-xl mt-14 leading-7 lg:!text-left"
+      />
+      {/* <p className="text-white font-normal text-sm sm:text-xl mt-14 leading-7 lg:text-left text-center">
+        Empower Your Journey with Mempool Insights
+      </p> */}
+      <p className="text-white font-medium text-sm sm:text-xl mt-8 leading-7 lg:text-left text-center">
         Chaleshsoft is Your Gateway to Optimized Blockchain Transactions and MEV
         Solutions
       </p>

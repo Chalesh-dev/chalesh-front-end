@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "@/components/Carousel";
+import AnimatedText from "@/components/AnimatedText";
 
 const LayoutSection2 = () => {
   const data = [
@@ -66,7 +67,10 @@ const LayoutSection2 = () => {
   ];
   return (
     <div className="w-full h-[250px] py-[30px] px-[8.5%] flex flex-col justify-center items-center gap-8 text-lg bg-[#5A4A4A] bg-opacity-20">
-      <p className="text-white text-center">Leveraging Cutting-Edge Technologies</p>
+      <AnimatedText
+        text="Leveraging Cutting-Edge Technologies"
+        className="text-white text-center"
+      />
       <Carousel slides={data} slideWidth={150} />
     </div>
   );

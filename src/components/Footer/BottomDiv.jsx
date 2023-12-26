@@ -6,7 +6,7 @@ const BottomDiv = () => {
     <div className="flex justify-between sm:flex-row flex-col md:px-16 px-2 gap-2 mt-5">
       <div className="flex justify-center items-center gap-3">
         <ImgComponent />
-        <span className="text-[#FFFFFF]">2023 Blockchain </span>
+        <span className="text-[#FFFFFF]">{new Date().getFullYear()}&copy; All rights Reserved. </span>
       </div>
       <div className="flex justify-center items-center md:gap-10 gap-2">
         <span className="text-white">Privacy Policy</span>

@@ -5,7 +5,7 @@ const ButtonCustom = ({
   onMouseEnter,
   onMouseLeave,
 }) => {
-  const buttonClasses = `p-3 rounded-lg text-sm hover:bg-sky-300 hover:text-slate-800 transition-all hover:duration-700 active:duration-100 ease-in active:bg-sky-600 active:outline-none active:shadow-outline border border-transparent ${className}`;
+  const buttonClasses = `p-3 rounded-lg shadow-md shadow-slate-500 text-sm hover:bg-sky-300 hover:text-slate-800 transition-all hover:duration-700 active:duration-100 ease-in active:bg-sky-600 active:outline-none active:shadow-outline border border-transparent ${className}`;
   return (
     <button
       className={buttonClasses}
