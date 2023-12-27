@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "./Slider";
 
-
 const LayoutSection7 = () => {
   //** data */
   const data = [
@@ -53,20 +52,17 @@ const LayoutSection7 = () => {
   ];
 
   return (
-    <div className="w-full h-[580px] flex flex-col gap-10 justify-center items-center p-9">
-      <p className="text-[#818CF8] font-bold text-center sm:text-5xl text-3xl px-6">
+    <div className="w-full h-[580px] flex flex-col gap-10 justify-center items-center">
+      <p className="text-[#818CF8] font-bold text-center sm:text-5xl text-3xl">
         Client Stories
       </p>
-      <p className="text-white text-center lg:text-4xl md:text-3xl sm:text-2xl px-6">
+      <p className="text-white text-center lg:text-4xl md:text-3xl sm:text-2xl">
         Empowering Success Through ChaleshSoft{" "}
       </p>
-      {/* <div className="px-2"> */}
-        <Slider
-          data={data}
-          // sliderClass="!h-[400px]"
-          className="lg:!w-[1153px] w-full lg:!h-[327px] h-auto max-h-[400px] bg-[#7E22CE]"
-        />
-      {/* </div> */}
+      <Slider
+        data={data}
+        className="lg:!w-[1153px] w-full lg:!h-[327px] h-auto max-h-[400px] bg-[#7E22CE]"
+      />
     </div>
   );
 };

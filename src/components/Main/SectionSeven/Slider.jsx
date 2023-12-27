@@ -9,10 +9,10 @@ const Slider = ({ data, className }) => {
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="min-h-[400px] h-[400px]"
+      className="min-h-[400px] h-[400px] w-[100vw] px-5"
     >
       {data.map((item, index) => (
         <SwiperSlide
