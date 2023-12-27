@@ -1,13 +1,74 @@
-import React from 'react'
+import React from "react";
+import Slider from "./Slider";
+
 
 const LayoutSection7 = () => {
-  return (
-    <div className='w-full h-[580px] flex flex-col gap-10 justify-center items-center'>
-        <p className='text-[#818CF8] font-bold text-center sm:text-5xl text-3xl px-6'>Client Stories</p>
-        <p className='text-white text-center lg:text-4xl md:text-3xl sm:text-2xl px-6'>Empowering Success Through ChaleshSoft </p>
-        <div className='text-white'>slider</div>
-    </div>
-  )
-}
+  //** data */
+  const data = [
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.11",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.22",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.33",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.44",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.55",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.66",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.77",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.88",
+      img: "/images/Main/Group.png",
+    },
+    {
+      href: "http://saaa",
+      text: "Reliable data and lightning-fast response times! highly recommended. -Sarah L.99",
+      img: "/images/Main/Group.png",
+    },
+  ];
 
-export default LayoutSection7
+  return (
+    <div className="w-full h-[580px] flex flex-col gap-10 justify-center items-center p-9">
+      <p className="text-[#818CF8] font-bold text-center sm:text-5xl text-3xl px-6">
+        Client Stories
+      </p>
+      <p className="text-white text-center lg:text-4xl md:text-3xl sm:text-2xl px-6">
+        Empowering Success Through ChaleshSoft{" "}
+      </p>
+      {/* <div className="px-2"> */}
+        <Slider
+          data={data}
+          // sliderClass="!h-[400px]"
+          className="lg:!w-[1153px] w-full lg:!h-[327px] h-auto max-h-[400px] bg-[#7E22CE]"
+        />
+      {/* </div> */}
+    </div>
+  );
+};
+
+export default LayoutSection7;

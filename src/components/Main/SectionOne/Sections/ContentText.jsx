@@ -14,15 +14,20 @@ const ContentText = () => {
       />
       <AnimatedText
         text="Empower Your Journey with Mempool Insights"
-        className="!font-normal text-sm sm:text-xl mt-14 leading-7 lg:!text-left"
+        className="!font-normal text-sm sm:text-xl mt-8 leading-7 lg:!text-left"
       />
       {/* <p className="text-white font-normal text-sm sm:text-xl mt-14 leading-7 lg:text-left text-center">
         Empower Your Journey with Mempool Insights
       </p> */}
-      <p className="text-white font-medium text-sm sm:text-xl mt-8 leading-7 lg:text-left text-center">
+      <AnimatedText
+        text="Chaleshsoft is Your Gateway to Optimized Blockchain Transactions and MEV
+        Solutions"
+        className="!font-normal text-sm sm:text-xl mt-4 leading-7 lg:!text-left text-center"
+      />
+      {/* <p className="text-white font-normal text-sm sm:text-xl mt-4 leading-7 lg:text-left text-center">
         Chaleshsoft is Your Gateway to Optimized Blockchain Transactions and MEV
         Solutions
-      </p>
+      </p> */}
     </>
   );
 };
