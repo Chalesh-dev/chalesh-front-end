@@ -1,68 +1,84 @@
 import React from "react";
 import Carousel from "@/components/Carousel";
 import AnimatedText from "@/components/AnimatedText";
+import SliderTwo from "./SliderTwo";
 
 const LayoutSection2 = () => {
   const data = [
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
     {
       img: "/images/main/polygan.png",
       name: "Polygan",
+      href: "https://amir"
     },
     {
       img: "/images/main/python.png",
       name: "Python",
+      href: "https://amir"
     },
     {
       img: "/images/main/solana.png",
       name: "Solana",
+      href: "https://amir"
     },
     {
       img: "/images/main/solidity.png",
       name: "Solidity",
+      href: "https://amir"
     },
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
     {
       img: "/images/main/solidity.png",
       name: "Solidity",
+      href: "https://amir"
     },
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
     {
       img: "/images/main/solana.png",
       name: "Solana",
+      href: "https://amir"
     },
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
     {
       img: "/images/main/solidity.png",
       name: "Solidity",
+      href: "https://amir"
     },
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
     {
       img: "/images/main/solana.png",
       name: "Solana",
+      href: "https://amir"
     },
     {
       img: "/images/main/ether.png",
       name: "Ethereum",
+      href: "https://amir"
     },
   ];
   return (
@@ -71,7 +87,8 @@ const LayoutSection2 = () => {
         text="Leveraging Cutting-Edge Technologies"
         className="text-white text-center"
       />
-      <Carousel slides={data} slideWidth={150} />
+      <SliderTwo data={data} />
+      {/* <Carousel slides={data} slideWidth={150} /> */}
     </div>
   );
 };

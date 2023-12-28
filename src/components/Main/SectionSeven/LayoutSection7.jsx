@@ -59,10 +59,10 @@ const LayoutSection7 = () => {
       <p className="text-white text-center lg:text-4xl md:text-3xl sm:text-2xl">
         Empowering Success Through ChaleshSoft{" "}
       </p>
-      <Slider
+      {/* <Slider
         data={data}
         className="lg:!w-[1153px] w-full lg:!h-[327px] h-auto max-h-[400px] bg-[#7E22CE]"
-      />
+      /> */}
     </div>
   );
 };
