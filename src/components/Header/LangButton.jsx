@@ -30,7 +30,7 @@ const LangButton = () => {
   };
 
   const classes = `flex justify-center text-white items-center gap-2 duration-200 mt-[12px] ${
-    isDropDown && '!border-slate-500 shadow'
+    isDropDown && '!border-slate-500'
   }`;
 
   return (

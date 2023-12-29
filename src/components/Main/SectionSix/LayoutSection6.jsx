@@ -1,6 +1,7 @@
 import React from "react";
 import SliderOne from "./SliderOne";
 import SliderTwo from "./SliderTwo";
+import AnimatedText from "@/components/AnimatedText";
 
 const LayoutSection6 = () => {
   return (
@@ -13,21 +14,19 @@ const LayoutSection6 = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      // h-[1046px]
       className="w-full h-[1933px] bg-cover flex flex-col gap-16 text-white items-center justify-center sm:px-10 px-3 "
     >
       <div className="max-w-[1000px] w-auto text-center">
         <p className="text-white sm:text-5xl text-3xl font-bold mb-12">
           Stay Updated!
         </p>
-        <p className="text-white sm:text-4xl text-xl font-bold leading-[2rem] sm:leading-[3rem]">
-          Explre Our Latest Insights and Articles on MEV Solutions and
-          Blockchain Innovation
-        </p>
+        <AnimatedText
+          text="Explore Our Latest Insights and Articles on MEV Solutions and
+        Blockchain Innovation"
+          className="text-white sm:text-4xl text-xl font-bold leading-[2rem] sm:leading-[3rem]"
+        />
       </div>
-      {/* <div className="px-5"> */}
       <SliderOne />
-      {/* </div> */}
       <p className="text-white sm:text-5xl text-3xl font-bold mb-12">
         Latest News
       </p>

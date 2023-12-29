@@ -11,7 +11,7 @@ const LayoutSection5 = () => {
       <div className="w-full flex justify-center px-6 my-5">
         <Slider />
       </div>
-      <ButtonCustom className="bg-[#FAFAFA] text-[#637381] font-bold">
+      <ButtonCustom className="bg-[#FAFAFA] text-[#637381] font-bold shadow-md shadow-slate-500">
         Build with Us
       </ButtonCustom>
     </div>
