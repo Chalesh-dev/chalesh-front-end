@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
     radial-gradient(circle at 0% 59%, #6a2c95a6 0%, transparent 8% ),
     radial-gradient(circle at 100% 80%, #6a2c95a6 0%, transparent 8% ),
     radial-gradient(circle at 0% 95%, #6a2c95a6 0%, transparent 3% ),
-    radial-gradient(circle at 0% 100%, #6a2c95a6 0%, #06051a 20%)`,
+    radial-gradient(circle at 0% 100%, #6a2c95a6 0%, #06051a 8%)`,
   };
   return (
     <div
