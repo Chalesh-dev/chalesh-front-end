@@ -4,7 +4,7 @@ import NewComing from "./NewComing";
 
 const ContentLeft = () => {
     return(
-        <div className="lg:w-[60vw] w-full flex flex-col items-center lg:items-start">
+        <div className="lg:w-[50vw] mr-3 w-full flex flex-col items-center lg:items-start">
             <NewComing />
             <ContentText />
             <Buttons />

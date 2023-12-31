@@ -6,11 +6,11 @@ const ContentText = () => {
     <>
       <AnimatedText
         text="Unveiling Blockchain"
-        className="lg:text-5xl md:text-6xl mt-7 sm:text-5xl sm:font-bold text-2xl lg:!text-left"
+        className="xl:text-5xl lg:text-4xl md:text-6xl mt-7 sm:text-5xl sm:font-bold text-2xl lg:!text-left"
       />
       <AnimatedText
         text="Potential boundaries"
-        className="lg:text-5xl md:text-6xl mt-4 sm:text-5xl sm:font-bold text-2xl lg:!text-left"
+        className="xl:text-5xl lg:text-4xl md:text-6xl mt-4 sm:text-5xl sm:font-bold text-2xl lg:!text-left"
       />
       <AnimatedText
         text="Empower Your Journey with Mempool Insights"
