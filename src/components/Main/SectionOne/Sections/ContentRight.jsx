@@ -12,9 +12,7 @@ const ContentRight = () => {
         className="max-w-[100%] h-[auto] object-contain"
         quality={100}
         objectFit="contain"
-        // fill={true}
       />
-      {/* <Image alt='blockchain 1' width={683} height={551} src='/images/Main/blockchain 1.png' /> */}
     </div>
   );
 };
