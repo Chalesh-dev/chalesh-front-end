@@ -6,77 +6,77 @@ import SliderTwo from "./SliderTwo";
 const LayoutSection2 = () => {
   const data = [
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
-      href: "https://amir"
+      href: "https://ethereum.org"
     },
     {
-      img: "/images/main/polygan.png",
+      img: "/images/Main/polygan.png",
       name: "Polygan",
-      href: "https://amir"
+      href: "https://polygan.org"
     },
     {
-      img: "/images/main/python.png",
+      img: "/images/Main/python.png",
       name: "Python",
       href: "https://amir"
     },
     {
-      img: "/images/main/solana.png",
+      img: "/images/Main/solana.png",
       name: "Solana",
       href: "https://amir"
     },
     {
-      img: "/images/main/solidity.png",
+      img: "/images/Main/solidity.png",
       name: "Solidity",
       href: "https://amir"
     },
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
       href: "https://amir"
     },
     {
-      img: "/images/main/solidity.png",
+      img: "/images/Main/solidity.png",
       name: "Solidity",
       href: "https://amir"
     },
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
       href: "https://amir"
     },
     {
-      img: "/images/main/solana.png",
+      img: "/images/Main/solana.png",
       name: "Solana",
       href: "https://amir"
     },
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
       href: "https://amir"
     },
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
       href: "https://amir"
     },
     {
-      img: "/images/main/solidity.png",
+      img: "/images/Main/solidity.png",
       name: "Solidity",
       href: "https://amir"
     },
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
       href: "https://amir"
     },
     {
-      img: "/images/main/solana.png",
+      img: "/images/Main/solana.png",
       name: "Solana",
       href: "https://amir"
     },
     {
-      img: "/images/main/ether.png",
+      img: "/images/Main/ether.png",
       name: "Ethereum",
       href: "https://amir"
     },
