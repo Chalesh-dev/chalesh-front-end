@@ -7,7 +7,7 @@ const Tabs = () => {
       <Link href="/services">Product</Link>
       <Link href="/">Blog</Link>
       <Link href="/">Docs</Link>
-      <Link href="/">About us</Link>
+      <Link href="/about">About us</Link>
     </div>
   );
 };

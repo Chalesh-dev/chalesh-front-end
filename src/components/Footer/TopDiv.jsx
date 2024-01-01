@@ -4,7 +4,7 @@ import TopDivLeft from "./TopDivLeft";
 
 const TopDiv = () => {
   return (
-    <div className="flex flex-col md:flex-row md:justify-between border-b-2 items-center md:items-end border-[#4E4E4E] md:px-16 pb-6 px-2 gap-6">
+    <div className="flex flex-col lg:flex-row justify-between border-b-2 sm:items-end items-center border-[#4E4E4E] xl:px-6 px-2 gap-4 pb-6">
         <TopDivLeft />
         <TopDivRight />
     </div>

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const TopDivRight = () => {
   return (
-    <div className="flex gap-4 justify-center items-center">
+    <div className="flex gap-4 sm:w-[150px] w-full justify-end">
       <motion.a
         whileHover={{ y: -4 }}
         whileTap={{ scale: 0.9 }}

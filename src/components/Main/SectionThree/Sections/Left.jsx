@@ -3,7 +3,7 @@ import Subjects from "./Subjects";
 
 const Left = () => {
   return (
-    <div className="lg:w-[50%] w-full flex flex-wrap gap-4 justify-center">
+    <div className="lg:w-[60%] w-full flex flex-wrap lg:gap-1 gap-4 justify-center items-center">
       <Subjects
         href="/subject"
         title="Simplified Access:"
