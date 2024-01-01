@@ -41,19 +41,12 @@ const Subjects = ({ title, text, href }) => {
         </div>
 
         <Link
-<<<<<<< HEAD
-          href="/"
-          className="flip-card-back w-[100%] h-[100%] rounded-lg flex flex-col gap-4 bg-[rgba(255,255,255,0.1)] justify-center items-center bg-gradient-to-b from-indigo-300"
-        >
-          <p className="text-dark text-left font-bold text-lg">See details</p>
-=======
         href="/"
           className="flip-card-back w-[100%] h-[100%] rounded-lg flex flex-col gap-4 bg-[rgba(255,255,255,0.1)] justify-center items-center bg-gradient-to-b from-indigo-300"
         >
           <p className="text-dark text-left font-bold text-lg">
             See details
           </p>
->>>>>>> a6fb968244a6fc2c184fcc37e0b8d2163a1b8aa0
           <FaEye size={30} />
         </Link>
       </motion.div>
