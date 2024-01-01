@@ -20,8 +20,7 @@ const ContentText = () => {
         Empower Your Journey with Mempool Insights
       </p> */}
       <AnimatedText
-        text="Chaleshsoft is Your Gateway to Optimized Blockchain Transactions and MEV
-        Solutions"
+        text="Chaleshsoft is Your Gateway to Optimized Blockchain Transactions and MEV Solutions"
         className="!font-normal text-sm sm:text-xl mt-4 leading-7 lg:!text-left text-center"
       />
       {/* <p className="text-white font-normal text-sm sm:text-xl mt-4 leading-7 lg:text-left text-center">
