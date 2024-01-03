@@ -1,12 +1,13 @@
+import BlogInfo from '@/components/Blogs/BlogInfo/BlogInfo';
 import { useRouter } from 'next/router'
 import React from 'react'
 
 const Page = () => {
     const router = useRouter();
-    console.log(router.query.slug);
+    const slug = router.query.slug;
   return (
-    <div>
-        <a href={router.query.slug}>blog:{router.query.slug}</a>
+    <div className='xl:px-[8.5%] lg:px-[5.5%] md:px-[3%] sm:px-[2%] px-[5px]'>
+        <BlogInfo slug={slug} />
     </div>
   )
 }

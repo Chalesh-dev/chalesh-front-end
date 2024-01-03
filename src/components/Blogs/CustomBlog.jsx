@@ -1,6 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import userPhoto from "/images/articles/userImg.png";
 
 const CustomBlog = ({
   articleImg,
@@ -9,32 +9,34 @@ const CustomBlog = ({
   article_created_at,
   min_read,
   alt,
-  userImg,
+  authorImg,
   authorName,
+  key,
+  href
 }) => {
   return (
-    <div className="flex xl:gap-10 lg:gap-5 md:gap-3 sm:gap-1 gap-0 justify-between items-center xl:p-6 lg:p-4 sm:p-2 p-1">
-      <div className="flex flex-col gap-5">
-        <div className="flex items-center gap-5">
+    <Link href={href} className="flex sm:flex-row flex-col-reverse xl:gap-10 lg:gap-5 md:gap-3 sm:gap-1 gap-2 justify-between items-center xl:p-6 lg:p-4 p-2 rounded-3xl cursor-pointer bg-[#5f1850] bg-opacity-20 border border-purple-500 border-opacity-50" key={key}>
+      <div className="flex flex-col md:gap-5 sm:gap-3 gap-2">
+        <div className="flex items-center gap-3">
           <Image
             width={20}
             height={20}
-            src={userImg ? userImg : userPhoto}
+            src={authorImg ? authorImg : '/images/articles/userImg.png'}
             alt={alt}
-            className="rounded-full"
+            className="rounded-full overflow-hidden"
           />
-          <span className="text-black text-sm font-semibold">{authorName}</span>
+          <span className="text-white text-sm font-normal">{authorName}</span>
         </div>
-        <h1 className="font-bold text-xl text-black">{articleTitle}</h1>
-        <p>{articleSummary}</p>
-        <div className="flex gap-3 items-center">
-          <span>{article_created_at}</span>
-          <span></span>
-          <span>{min_read}</span>
+        <h1 className="font-semibold sm:text-2xl text-base bg-gradient-to-r from-green-400 to-blue-400 inline-block text-transparent bg-clip-text">{articleTitle}</h1>
+        <p className="text-white md:text-[0.9rem] text-[0.7rem]">{articleSummary}</p>
+        <div className="flex sm:gap-3 gap-2 items-center">
+          <span className="text-[#c0c0c0] sm:text-xs text-[0.65rem]">{article_created_at}</span>
+          <span className="text-[#7e285a] mb-2">.</span>
+          <span className="text-[#c0c0c0] sm:text-xs text-[0.65rem]">{min_read} min read</span>
         </div>
       </div>
-      <Image src={articleImg} width={200} height={135} alt={alt} />
-    </div>
+      <Image src={articleImg} width={200} height={135} alt={alt} className="rounded-xl" />
+    </Link>
   );
 };
 

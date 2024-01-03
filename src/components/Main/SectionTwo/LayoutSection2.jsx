@@ -1,5 +1,3 @@
-import React from "react";
-import Carousel from "@/components/Carousel";
 import AnimatedText from "@/components/AnimatedText";
 import SliderTwo from "./SliderTwo";
 
@@ -88,7 +86,6 @@ const LayoutSection2 = () => {
         className="text-white text-center"
       />
       <SliderTwo data={data} />
-      {/* <Carousel slides={data} slideWidth={150} /> */}
     </div>
   );
 };
