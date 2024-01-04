@@ -6,7 +6,7 @@ import BlogCard from "../BlogCard";
 import Slider from "./Slider";
 
 const BlogInfo = ({ slug }) => {
-  console.log("qqq", slug);
+  // console.log("qqq", slug);
 
   const slugInfo = [
     {
@@ -126,7 +126,7 @@ const BlogInfo = ({ slug }) => {
 
   return (
     <>
-      <div className="text-white flex flex-col gap-5 2xl:px-72 xl:px-52 lg:px-24 md:px-10 sm:px-5 px-4 mb-10">
+      <div className="text-white flex flex-col gap-5 2xl:px-72 xl:px-52 lg:px-24 md:px-10 sm:px-5 px-4">
         {/* title */}
         <h1 className="lg:text-4xl md:text-2xl sm:text-xl text-lg lg:font-extrabold sm:font-medium">
           2023: A Review of the Year in Neuroscience
@@ -259,22 +259,9 @@ const BlogInfo = ({ slug }) => {
           ))}
         </div>
 
-        {/* <BlogCard
-          href="/"
-          articleImg="/images/articles/art1.png"
-          userImg="/images/articles/userImg.png"
-          userName="Mark Humphries"
-          title="Why does the brain have a reward prediction error?"
-          summary="So all we’ve learnt is that if you incentivise a global talent pool
-        of scientists to churn out papers as fast as they can, while also
-        teaching, marking, tutoring, sitting on committees, reviewing,
-        interviewing, and endless others “ings”, then those papers are not,
-        unsurprisingly, deeply thought, long-nurtured disruptive ideas."
-          min_read="10"
-          created_at="Feb 11, 2019"
-          likeNum="20"
-          commentNum="154"
-        /> */}
+        {/* chats comes here */}
+
+        <h1 className="mb-4">You also might like these...</h1>
       </div>
 
       <Slider data={slugInfo} />

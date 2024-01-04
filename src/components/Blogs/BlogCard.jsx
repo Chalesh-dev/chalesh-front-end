@@ -26,7 +26,7 @@ const BlogCard = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 max-w-[320px] bg-[#6c6c6c] overflow-hidden rounded-lg">
+    <div className="flex flex-col gap-3 w-[320px] min-w-[320px] bg-[#6c6c6c] overflow-hidden rounded-lg">
       <Link href={href}>
         <Image
           src={articleImg}

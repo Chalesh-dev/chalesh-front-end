@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -6,30 +6,41 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Autoplay, Pagination, Navigation, EffectCoverflow } from 'swiper/modules';
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectCoverflow,
+} from "swiper/modules";
 import BlogCard from "../BlogCard";
 
 const Slider = ({ data }) => {
+  const swiperRef = useRef();
+
   return (
-    <div className="slider--custom">
+    <div
+    onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
+    onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
+    className="slider--custom">
       <Swiper
+        ref={swiperRef}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
+          rotate: 1,
+          stretch: 3,
+          depth: 10,
+          modifier: 2,
         }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="swiper--container overflow-visible"
+        modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
+        className="swiper--container w-full h-[410px]"
       >
         {data.map(
           (item, index) => (
