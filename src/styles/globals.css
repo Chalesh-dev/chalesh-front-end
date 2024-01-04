@@ -32,3 +32,21 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
+.slider--custom {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0px;
+}
+
+.slider--custom .swiper--container {
+  padding: 1rem 0;
+  position: relative;
+  overflow: visible;
+}
+
+.slider--custom .swiper-slide{
+  width: 320px;
+  height: auto;
+  position: relative;
+}

@@ -1,6 +1,5 @@
 import BlogInfo from '@/components/Blogs/BlogInfo/BlogInfo';
 import { useRouter } from 'next/router'
-import React from 'react'
 
 const Page = () => {
     const router = useRouter();
