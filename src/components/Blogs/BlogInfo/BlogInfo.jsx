@@ -4,6 +4,7 @@ import BlogImage from "./BlogImage";
 import CategoriesRelatedToThisBlog from "./CategoriesRelatedToThisBlog";
 import BlogCard from "../BlogCard";
 import Slider from "./Slider";
+import ChatBlog from "./ChatBlog";
 
 const BlogInfo = ({ slug }) => {
   // console.log("qqq", slug);
@@ -122,6 +123,77 @@ const BlogInfo = ({ slug }) => {
     "Science",
     "Psychology",
     "Dopamine",
+  ];
+
+  const comments = [
+    {
+      user: {
+        id: "dewfrefr",
+        name: "amir",
+        image: "/images/articles/userImg.png",
+      },
+      content: "Sound like a fake interaction",
+      created_at: "2024-01-02 23:11:05",
+      replies: [
+        {
+          user: {
+            id: "dewfrefr",
+            name: "amir",
+            image: "/images/articles/userImg.png",
+          },
+          content: "It's her way of converting a dry article into a story :)",
+          created_at: "2024-01-03 23:11:05",
+        },
+        {
+          user: {
+            id: "dewfrefr",
+            name: "amir",
+            image: "/images/articles/userImg.png",
+          },
+          content: "It's her way of converting a dry article into a story :)",
+          created_at: "2024-01-03 23:11:05",
+        },
+      ],
+    },
+    {
+      user: {
+        id: "dewfrefdedr",
+        name: "amirp",
+        image: "/images/articles/userImg.png",
+      },
+      content: "Sound like a fake interaction",
+      created_at: "2024-01-02 23:11:05",
+      replies: [
+        {
+          user: {
+            id: "dewfrefr",
+            name: "amir",
+            image: "/images/articles/userImg.png",
+          },
+          content: "It's her way of converting a dry article into a story :)",
+          created_at: "2024-01-03 23:11:05",
+        },
+        {
+          user: {
+            id: "dewfrefr",
+            name: "amir",
+            image: "/images/articles/userImg.png",
+          },
+          content: "It's her way of converting a dry article into a story :)",
+          created_at: "2024-01-03 23:11:05",
+        },
+      ],
+    },
+    {
+      user: {
+        id: "dewfrefdedr",
+        name: "amirp",
+        // image: "/images/articles/userImg.png",
+      },
+      content: "Sound like a fake interaction",
+      created_at: "2024-01-02 23:11:05",
+      replies: [],
+    },
   ];
 
   return (
@@ -260,6 +332,7 @@ const BlogInfo = ({ slug }) => {
         </div>
 
         {/* chats comes here */}
+        <ChatBlog comments={comments} />
 
         <h1 className="mb-4">You also might like these...</h1>
       </div>

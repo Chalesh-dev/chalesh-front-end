@@ -13,23 +13,26 @@ module.exports = {
         "gradient-radial":
           "radial-gradient(circle_at_bottom, #4338CA, #1E1B4B, #4338CA)",
       },
+      transitionProperty: {
+        "height": "height",
+      },
     },
     screens: {
-      'xs': "400px",
-      
-      'sm': "640px",
+      xs: "400px",
+
+      sm: "640px",
       // => @media (min-width: 640px) { ... }
 
-      'md': "768px",
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
-      'lg': "1024px",
+      lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      'xl': "1280px",
+      xl: "1280px",
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': "1536px"
+      "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
   },

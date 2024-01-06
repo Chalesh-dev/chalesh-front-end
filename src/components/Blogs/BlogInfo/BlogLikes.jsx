@@ -7,12 +7,12 @@ const BlogLikes = ({ likeNum, commentNum }) => {
       <div className="flex gap-6">
         {/* likes */}
         <div className="flex items-center gap-2">
-          <FaHandsClapping />
+          <FaHandsClapping className="cursor-pointer" />
           <span className="text-[#c0c0c0] text-[0.7rem]">{likeNum}</span>
         </div>
         {/* comments */}
         <div className="flex items-center gap-2">
-          <FaRegComment />
+          <FaRegComment className="cursor-pointer" />
           <span className="text-[#c0c0c0] text-[0.7rem]">{commentNum}</span>
         </div>
       </div>
