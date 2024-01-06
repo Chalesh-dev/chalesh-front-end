@@ -5,8 +5,10 @@ import CategoriesRelatedToThisBlog from "./CategoriesRelatedToThisBlog";
 import BlogCard from "../BlogCard";
 import Slider from "./Slider";
 import ChatBlog from "./ChatBlog";
+import { useState } from "react";
 
 const BlogInfo = ({ slug }) => {
+  const [openComments, setOpenComments] = useState(false);
   // console.log("qqq", slug);
 
   const slugInfo = [
@@ -198,7 +200,7 @@ const BlogInfo = ({ slug }) => {
 
   return (
     <>
-      <div className="text-white flex flex-col gap-5 2xl:px-72 xl:px-52 lg:px-24 md:px-10 sm:px-5 px-4">
+      <div className="relative text-white flex flex-col gap-5 2xl:px-72 xl:px-52 lg:px-24 md:px-10 sm:px-5 px-4">
         {/* title */}
         <h1 className="lg:text-4xl md:text-2xl sm:text-xl text-lg lg:font-extrabold sm:font-medium">
           2023: A Review of the Year in Neuroscience
@@ -211,7 +213,11 @@ const BlogInfo = ({ slug }) => {
           name="amir seraj"
         />
 
-        <BlogLikes likeNum="115" commentNum="16" />
+        <BlogLikes
+          setOpenComments={setOpenComments}
+          likeNum="115"
+          commentNum="16"
+        />
 
         <BlogImage img="/images/articles/art-large.webp" />
 
@@ -323,7 +329,11 @@ const BlogInfo = ({ slug }) => {
           long-nurtured disruptive ideas.
         </p>
 
-        <BlogLikes likeNum="115" commentNum="16" />
+        <BlogLikes
+          setOpenComments={setOpenComments}
+          likeNum="115"
+          commentNum="16"
+        />
 
         <div className="flex flex-wrap gap-2 w-full">
           {categories.map((item, index) => (
@@ -332,7 +342,11 @@ const BlogInfo = ({ slug }) => {
         </div>
 
         {/* chats comes here */}
-        <ChatBlog comments={comments} />
+        <ChatBlog
+          comments={comments}
+          setOpenComments={setOpenComments}
+          openComments={openComments}
+        />
 
         <h1 className="mb-4">You also might like these...</h1>
       </div>
