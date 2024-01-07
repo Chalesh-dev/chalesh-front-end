@@ -59,6 +59,14 @@ const Layout = ({ children }) => {
       };
       setStyle(gradientStyle);
     }
+    if (router.pathname === "/products") {
+      const gradientStyle = {
+        backgroundImage: `
+        radial-gradient(circle at 100% 0%, #6a2c95a6 0%, transparent 25% ),
+        radial-gradient(circle at 0% 70%, #6a2c95a6 -20%, #06051a 20%)`,
+      };
+      setStyle(gradientStyle);
+    }
   }, [router.asPath]);
 
   return (
