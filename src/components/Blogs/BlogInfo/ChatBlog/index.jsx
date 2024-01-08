@@ -3,10 +3,8 @@ import ShowComments from "./ShowComments";
 import { IoIosClose } from "react-icons/io";
 
 const ChatBlog = ({ comments, setOpenComments, openComments }) => {
-  console.log(comments);
-  console.log(openComments);
+  
   const handleClose = () => {
-    console.log(openComments);
     setOpenComments(false);
   };
 

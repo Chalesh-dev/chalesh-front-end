@@ -1,4 +1,4 @@
-import React from "react";
+'use client'
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
 import { MdOutlineAlternateEmail } from "react-icons/md";

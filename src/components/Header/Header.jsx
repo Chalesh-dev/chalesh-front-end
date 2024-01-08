@@ -5,18 +5,14 @@ import Tabs from "./Tabs";
 import { BiChevronRight } from "react-icons/bi";
 import LangButton from "./LangButton";
 import MobileNavigation from "./MobileNavigation";
-import { motion } from "framer-motion";
 
 const Header = () => {
-  const MotionLink = motion(Link);
   return (
     // bg-gradient-to-r from-[#06051a] from-60% to-[#4338CA]
     <header className="w-full px-[8.5%] pt-10">
       <div className="h-[150px] w-full flex items-center justify-between">
         <div className="flex gap-5">
-          <MotionLink href="/" whileHover={{ scale: 1.5 }}>
-            <ImgComponent />
-          </MotionLink>
+          <ImgComponent />
           <Tabs />
         </div>
 

@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import ImgComponent from "./ImgComponent";

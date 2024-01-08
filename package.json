@@ -1,27 +1,25 @@
 {
-  "name": "developer-portfolio-starter-code",
+  "name": "chalesh-front-end",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "framer-motion": "^10.6.0",
+    "framer-motion": "^10.17.9",
     "moment": "^2.30.1",
-    "next": "13.5.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
     "react-icons": "^4.12.0",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.7"
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }

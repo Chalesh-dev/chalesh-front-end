@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import ButtonCustom from "../buttonCustom";
 import { GrLanguage } from "react-icons/gr";

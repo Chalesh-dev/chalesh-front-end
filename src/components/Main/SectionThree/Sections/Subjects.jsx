@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEye } from "react-icons/fa";
@@ -21,7 +22,7 @@ const Subjects = ({ title, text, href }) => {
     <div
       className="flex flex-col overflow-hidden h-[265px] w-[260px] rounded-xl perspective-1000 cursor-pointer"
       onMouseOver={handleFlipOver}
-      onMouseOut={handleFlipOut}
+      onMouseOut={handleFlipOut} 
     >
       <motion.div
         className="w-[100%] h-[100%] flip-card-inner p-2"

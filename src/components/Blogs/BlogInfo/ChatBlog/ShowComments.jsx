@@ -1,3 +1,4 @@
+'use client'
 import { FaRegComment } from "react-icons/fa";
 import { useState } from "react";
 import WriteReplyToComments from "./WriteReplyToComments";

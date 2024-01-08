@@ -1,3 +1,4 @@
+'use client'
 import AnimatedText from "@/components/AnimatedText";
 import React from "react";
 

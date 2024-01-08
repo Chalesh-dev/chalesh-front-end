@@ -1,7 +1,11 @@
-import React from "react";
+// "use client";
 import Slider from "./Slider";
 
 const LayoutSection7 = () => {
+  // const [isClient, setIsClient] = useState(false);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
   //** data */
   const data = [
     {
@@ -59,6 +63,7 @@ const LayoutSection7 = () => {
       <p className="text-white text-center lg:text-4xl md:text-3xl sm:text-2xl">
         Empowering Success Through ChaleshSoft{" "}
       </p>
+      {/* {isClient && <Slider data={data} />} */}
       <Slider data={data} />
     </div>
   );

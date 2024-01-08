@@ -1,3 +1,4 @@
+'use client'
 import NameProperty from "./NameProperty";
 import BlogLikes from "./BlogLikes";
 import BlogImage from "./BlogImage";
