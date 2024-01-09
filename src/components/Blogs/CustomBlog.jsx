@@ -20,11 +20,11 @@ const CustomBlog = ({
       className="flex sm:flex-row flex-col-reverse xl:gap-10 lg:gap-5 md:gap-3 sm:gap-1 gap-2 justify-between items-center xl:p-6 lg:p-4 p-2 rounded-3xl cursor-pointer bg-[#5f1850] bg-opacity-20 border border-purple-500 border-opacity-50"
       key={key}
     >
-      <div className="flex flex-col md:gap-5 sm:gap-3 gap-2">
+      <div className="flex flex-col md:gap-5 sm:gap-3 gap-2 sm:w-[80%] w-[100%]">
         <div className="flex items-center gap-3">
           <Image
-            width={20}
-            height={20}
+            width={25}
+            height={25}
             src={authorImg ? authorImg : "/images/articles/userImg.png"}
             alt={alt}
             className="rounded-full overflow-hidden"
@@ -47,13 +47,16 @@ const CustomBlog = ({
           </span>
         </div>
       </div>
-      <Image
-        src={articleImg}
-        width={200}
-        height={135}
-        alt={alt}
-        className="rounded-xl"
-      />
+      <div className="flex justify-center items-center sm:w-[20%] w-[100%]">
+        <Image
+          src={articleImg}
+          width={200}
+          height={135}
+          alt={alt}
+          className="rounded-xl"
+          
+        />
+      </div>
     </Link>
   );
 };
