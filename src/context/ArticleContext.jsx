@@ -6,7 +6,7 @@ const initialProvider = {
   articles: null,
   currentPage: null,
   lastPage: null,
-  // loading: false
+  loading: false,
 };
 
 /**env */
@@ -18,30 +18,45 @@ const ArticleProvider = ({ children }) => {
   const [articles, setArticles] = useState(initialProvider.articles);
   const [currentPage, setCurrentPage] = useState(initialProvider.currentPage);
   const [lastPage, setLastPage] = useState(initialProvider.lastPage);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleGetArticles = async (page = 1) => {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-    const res = await fetch(AppUrl + `articles?page=${page}`, {
-      next: {
-        revalidate: 1800,
-      },
-    });
-    const data = await res.json();
-    setArticles(data.data);
-    setCurrentPage(data.current_page);
-    setLastPage(data.last_page);
+  const handleGetArticles = async (page) => {
+    setLoading(true);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      const response = await fetch(AppUrl + `articles?page=${page}`, {
+        next: {
+          revalidate: 1800,
+        },
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not Ok");
+      }
+      const data = await response.json();
+      // setArticles((prev) => [
+      //   ...(prev?.length ? prev : []),
+      //   ...data.data,
+      // ]);
+      setArticles(data.data);
+      setCurrentPage(data.current_page);
+      setLastPage(data.last_page);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
   };
 
-  useEffect(() => {
-    handleGetArticles();
-  }, []);
+  // useEffect(() => {
+  //   handleGetArticles();
+  // }, []);
 
   const values = {
     handleGetArticles,
     articles,
     currentPage,
     lastPage,
+    loading,
   };
 
   return (

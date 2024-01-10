@@ -53,7 +53,7 @@ const CustomBlog = ({
           width={200}
           height={135}
           alt={alt}
-          className="rounded-xl"
+          className="rounded-lg w-[200px] h-[140px]"
           
         />
       </div>

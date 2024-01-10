@@ -1,8 +1,8 @@
 import React from "react";
 
-const Skeleton = () => {
+const Skeleton = ({ab}) => {
   return (
-    <ul className="w-full flex flex-col gap-4">
+    <ul ref={ab} className="w-full flex flex-col gap-4">
       {[...Array(10)].map((blog, index) => (
         <li key={index} className="flex sm:flex-row flex-col-reverse xl:gap-10 lg:gap-5 md:gap-3 sm:gap-1 gap-2 justify-between items-center xl:p-6 p-4 rounded-3xl border border-slate-500 border-opacity-50 bg-[#eee] animate-pulse min-h-[235px]">
           <div className="flex flex-col md:gap-5 sm:gap-3 gap-2 sm:w-[80%] w-[100%]">
