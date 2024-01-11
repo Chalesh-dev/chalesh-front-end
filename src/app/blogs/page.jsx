@@ -10,9 +10,9 @@ const page = () => {
       key={Math.random()}
     >
       <div className="lg:w-[70%] w-full p-1">
-        {/* <Suspense fallback={<Skeleton />}> */}
+        <Suspense fallback={<Skeleton />}>
           <BlogsList />
-        {/* </Suspense> */}
+        </Suspense>
       </div>
 
       {/* <Suspense fallback={<Loading />}> */}

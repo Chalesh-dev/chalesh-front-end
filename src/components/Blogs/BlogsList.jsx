@@ -1,28 +1,27 @@
-"use client";
-import React, { Suspense, useEffect, useState } from "react";
+// "use client";
+// import React, { Suspense, useEffect, useState } from "react";
 import CustomBlog from "./CustomBlog";
-import { useArticle } from "@/hooks/useArticle";
 import moment from "moment";
+// import { useArticle } from "@/hooks/useArticle";
 import Skeleton from "@/app/blogs/Skeleton";
+import { fetchArticle } from "@/app/blogs/actions";
 
-const BlogsList = () => {
-  const { articles, handleGetArticles } = useArticle();
-  const [loading, setLoading] = useState(true);
+const BlogsList = async () => {
+  const articles = await fetchArticle(1);
+  const {current_page, last_page, data} = articles;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await handleGetArticles(3);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  // const { articles, handleGetArticles, currentPage, lastPage, loading } = useArticle();
 
-  if (loading) {
-    return <Skeleton />;
-  }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     await handleGetArticles(1);
+  //   };
+  //   fetchData();
+  // }, []);
+
+  // if (loading) {
+  //   return <Skeleton />;
+  // }
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -33,10 +32,10 @@ const BlogsList = () => {
 
   return (
     <div className="w-full flex flex-col gap-5">
-      {articles?.map((blog) => (
+      {data?.map((blog) => (
         <CustomBlog
-          authorName={blog.author.name}
-          authorImg={blog.author.image}
+          authorName={blog?.author?.name}
+          authorImg={blog?.author?.image}
           key={blog?.id}
           articleImg={blog?.image}
           alt="image"
@@ -47,6 +46,7 @@ const BlogsList = () => {
           article_created_at={moment(blog?.created_at).fromNow()}
         />
       ))}
+      <Skeleton />
     </div>
   );
 };
