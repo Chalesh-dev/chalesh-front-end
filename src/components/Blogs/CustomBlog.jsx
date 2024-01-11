@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import TruncatedSummary from "./TruncatedSummary";
 
 const CustomBlog = ({
   articleImg,
@@ -17,10 +18,10 @@ const CustomBlog = ({
   return (
     <Link
       href={href}
-      className="flex sm:flex-row flex-col-reverse xl:gap-10 lg:gap-5 md:gap-3 sm:gap-1 gap-2 justify-between items-center xl:p-6 lg:p-4 p-2 rounded-3xl cursor-pointer bg-[#5f1850] bg-opacity-20 border border-purple-500 border-opacity-50"
+      className="overflow-hidden flex sm:flex-row flex-col-reverse xl:gap-10 lg:gap-5 md:gap-3 sm:gap-1 gap-2 justify-between items-center rounded-3xl cursor-pointer bg-[#5f1850] bg-opacity-20 border border-purple-500 border-opacity-50"
       key={key}
     >
-      <div className="flex flex-col md:gap-5 sm:gap-3 gap-2 sm:w-[80%] w-[100%]">
+      <div className="flex flex-col md:gap-5 sm:gap-3 gap-2 sm:w-[80%] w-[100%] xl:p-6 p-4">
         <div className="flex items-center gap-3">
           <Image
             width={25}
@@ -35,7 +36,7 @@ const CustomBlog = ({
           {articleTitle}
         </h1>
         <p className="text-white md:text-[0.9rem] text-[0.7rem]">
-          {articleSummary}
+          <TruncatedSummary summary={articleSummary} limit={30} />
         </p>
         <div className="flex sm:gap-3 gap-2 items-center">
           <span className="text-[#c0c0c0] sm:text-xs text-[0.65rem]">
@@ -47,13 +48,16 @@ const CustomBlog = ({
           </span>
         </div>
       </div>
-      <div className="flex justify-center items-center sm:w-[20%] w-[100%]">
+      <div className="flex justify-center items-center sm:w-[20%] w-[100%] xl:p-6 lg:p-4 sm:p-2 p-0">
         <Image
           src={articleImg}
           width={200}
-          height={135}
+          height={150}
           alt={alt}
-          className="rounded-xl"
+          layout="fixed"
+          style={{objectFit:"cover"}}
+          objectPosition="50% 50%"
+          className="sm:rounded-xl rounded-t-xl sm:w-[200px] h-[150px] w-[100%]"
           
         />
       </div>

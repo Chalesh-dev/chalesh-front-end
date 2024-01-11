@@ -7,9 +7,15 @@ import BlogCard from "../BlogCard";
 import Slider from "./Slider";
 import ChatBlog from "./ChatBlog";
 import { useState } from "react";
+import { fetchSingleArticle } from "@/app/blogs/actions";
+import { useRouter } from "next/navigation";
+
 
 const BlogInfo = ({ slug }) => {
   const [openComments, setOpenComments] = useState(false);
+  const router = useRouter();
+  // console.log(router);
+  // fetchSingleArticle();
   // console.log("qqq", slug);
 
   const slugInfo = [

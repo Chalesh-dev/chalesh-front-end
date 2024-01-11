@@ -25,13 +25,13 @@ const Skeleton = () => {
   }, [inView]);
   return (
     <>
-      <div className="w-full flex flex-col gap-5">
+      <div className="w-full flex flex-col gap-3">
         {data?.map((blog) => (
           <CustomBlog
             authorName={blog?.author?.name}
             authorImg={blog?.author?.image}
             key={blog?.id}
-            articleImg={blog?.image}
+            articleImg={blog?.image_three}
             alt="image"
             articleTitle={blog?.title}
             articleSummary={blog?.summary}
@@ -43,7 +43,7 @@ const Skeleton = () => {
       </div>
       {/* {lastPage !== currentPage && ( */}
       <section>
-        <ul ref={ref} className="w-full flex flex-col gap-4">
+        <ul ref={ref} className="w-full flex flex-col gap-3">
           {(lastPage >= currentPage) && [...Array(5)].map((blog, index) => (
             <li
               key={index}

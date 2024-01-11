@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaHandsClapping } from "react-icons/fa6";
 import { FaRegComment } from "react-icons/fa";
+import TruncatedSummary from "./TruncatedSummary";
 
 const BlogCard = ({
   articleImg,
@@ -15,11 +16,11 @@ const BlogCard = ({
   commentNum,
   href,
 }) => {
-  const words = summary.split(" ");
-  /** take the five words */
-  const firstFiveWords = words.slice(0, 13);
-  /** join five words into a string */
-  const truncatedSummary = firstFiveWords.join(" ");
+  // const words = summary.split(" ");
+  // /** take the five words */
+  // const firstFiveWords = words.slice(0, 13);
+  // /** join five words into a string */
+  // const truncatedSummary = firstFiveWords.join(" ");
 
   const handdd = () => {
     console.log("sssss");
@@ -52,7 +53,8 @@ const BlogCard = ({
           <h1 className="font">{title}</h1>
         </Link>
         <span className="text-[0.75rem]">
-          {truncatedSummary} <span className="text-lg">.....</span>
+          {/* {truncatedSummary} <span className="text-lg">.....</span> */}
+          <TruncatedSummary summary={summary} limit={13} />
         </span>
         <div className="flex gap-2 text-[0.7rem]">
           <span>{min_read} min read</span>
