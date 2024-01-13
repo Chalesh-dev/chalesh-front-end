@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -43,7 +43,7 @@ const Slider = ({ data }) => {
         modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
         className="swiper--container w-full h-[410px]"
       >
-        {data.map(
+        {data?.map(
           (item, index) => (
             <SwiperSlide key={index} className="mx-2">
               <BlogCard

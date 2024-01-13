@@ -6,7 +6,7 @@ const initialProvider = {
   articles: null,
   currentPage: null,
   lastPage: null,
-  loading: false
+  loading: false,
 };
 
 /**env */
@@ -20,26 +20,20 @@ const ArticleProvider = ({ children }) => {
   const [lastPage, setLastPage] = useState(initialProvider.lastPage);
   const [loading, setLoading] = useState(false);
 
-  const handleGetArticles = async (page = 1) => {
+  const handleSingleArticle = async (slug) => {
     setLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      const response = await fetch(AppUrl + `articles?page=${page}`, {
+      const response = await fetch(AppUrl + `article/${slug}`, {
         next: {
-          revalidate: 1800,
+          revalidate: 10,
         },
       });
       if (!response.ok) {
         throw new Error("Network response was not Ok");
       }
       const data = await response.json();
-      // setArticles((prev) => [
-      //   ...(prev?.length ? prev : []),
-      //   ...data.data,
-      // ]);
-      setArticles(data.data);
-      setCurrentPage(data.current_page);
-      setLastPage(data.last_page);
+      console.log(data);
+      // setArticles(data.data);
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -47,15 +41,43 @@ const ArticleProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    handleGetArticles();
-  }, []);
+  // const handleGetArticles = async (page = 1) => {
+  //   setLoading(true);
+  //   try {
+  //     await new Promise((resolve) => setTimeout(resolve, 3000));
+  //     const response = await fetch(AppUrl + `articles?page=${page}`, {
+  //       next: {
+  //         revalidate: 1800,
+  //       },
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not Ok");
+  //     }
+  //     const data = await response.json();
+  //     // setArticles((prev) => [
+  //     //   ...(prev?.length ? prev : []),
+  //     //   ...data.data,
+  //     // ]);
+  //     setArticles(data.data);
+  //     setCurrentPage(data.current_page);
+  //     setLastPage(data.last_page);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     setLoading(false);
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   handleGetArticles();
+  // }, []);
 
   const values = {
-    handleGetArticles,
+    // handleGetArticles,
     articles,
     currentPage,
     lastPage,
+    handleSingleArticle,
   };
 
   return (

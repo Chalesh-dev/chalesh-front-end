@@ -17,7 +17,7 @@ const ChatBlog = ({ comments, setOpenComments, openComments }) => {
     >
       <div className="flex justify-between items-center w-full sm:px-8 px-1 mb-3">
         <p className="text-lg text-black text-left font-bold w-full">
-          Responses ({comments.length})
+          Responses ({comments?.length})
         </p>
         <IoIosClose
           onClick={handleClose}
