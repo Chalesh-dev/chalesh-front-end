@@ -58,7 +58,6 @@ const CustomBlog = ({
           style={{objectFit:"cover"}}
           objectPosition="50% 50%"
           className="sm:rounded-xl rounded-t-xl sm:w-[200px] h-[150px] w-[100%]"
-          
         />
       </div>
     </Link>

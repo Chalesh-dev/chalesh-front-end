@@ -4,8 +4,8 @@ import Skeleton from "@/app/blogs/Skeleton";
 import { fetchArticle } from "@/app/blogs/actions";
 
 const BlogsList = async () => {
-  const articles = await fetchArticle(1);
-  const {current_page, last_page, data} = articles;
+  const { current_page, last_page, data } = await fetchArticle(1);
+  console.log("articles", data);
 
   return (
     <div className="w-full flex flex-col gap-3">

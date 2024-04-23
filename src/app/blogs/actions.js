@@ -6,20 +6,23 @@ import { revalidatePath } from "next/cache";
 const AppUrl = process.env.NEXT_PUBLIC_APP_URL;
 
 export const fetchArticle = async (page) => {
-  const response = await fetch(AppUrl + `articles?page=${page}`, {
-    next: {
-      revalidate: 10,
-    },
-  });
-
-  const res = await response.json();
-
-  const { current_page, last_page, data } = res;
-
-  console.log(data);
-
-  revalidatePath("/blogs");
-  return { current_page, last_page, data };
+  try {
+    const res = await fetch(AppUrl + `articles?page=${page}`, {
+      next: {
+        revalidate: 10,
+      },
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+    const response = await res.json();
+    revalidatePath("/blogs");
+    return response;
+    // return { current_page, last_page, data } = response;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const fetchSingleArticle = async (slug) => {
