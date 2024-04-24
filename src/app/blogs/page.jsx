@@ -1,7 +1,7 @@
 import BlogsCategories from "@/components/Blogs/BlogsCategories";
 import BlogsList from "@/components/Blogs/BlogsList";
 import { Suspense } from "react";
-import Skeleton from "./Skeleton";
+import InitialSkeleton from "./InitialSkeleton";
 
 const page = () => {
   return (
@@ -10,7 +10,7 @@ const page = () => {
       key={Math.random()}
     >
       <div className="lg:w-[70%] w-full p-1">
-        <Suspense fallback={<Skeleton />}>
+        <Suspense fallback={<InitialSkeleton />}>
           <BlogsList />
         </Suspense>
       </div>

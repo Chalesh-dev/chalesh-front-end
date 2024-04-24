@@ -5,7 +5,6 @@ import { fetchArticle } from "@/app/blogs/actions";
 
 const BlogsList = async () => {
   const { current_page, last_page, data } = await fetchArticle(1);
-  console.log("articles", data);
 
   return (
     <div className="w-full flex flex-col gap-3">
@@ -23,7 +22,7 @@ const BlogsList = async () => {
           article_created_at={moment(blog?.created_at).fromNow()}
         />
       ))}
-      <Skeleton />
+      {data?.length > 0 && <Skeleton />}
     </div>
   );
 };
