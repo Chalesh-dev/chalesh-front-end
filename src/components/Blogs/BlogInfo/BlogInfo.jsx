@@ -20,7 +20,7 @@ const BlogInfo = () => {
     await fetchSingleArticle(slug);
     try {
       const data = await fetchSingleArticle(slug);
-      console.log(data);
+      console.log('data',data);
       setArticle(data);
     } catch (error) {
       console.log(error);
@@ -31,7 +31,7 @@ const BlogInfo = () => {
     singleArticle(slug);
   }, [slug]);
 
-  console.log("deddd", article);
+  console.log('article',article);
 
   return (
     <>
@@ -55,6 +55,7 @@ const BlogInfo = () => {
               setOpenComments={setOpenComments}
               likeNum={article?.liked_count}
               commentNum={article?.comments_count}
+              openComments={openComments}
             />
           ))}
 
@@ -69,6 +70,7 @@ const BlogInfo = () => {
               setOpenComments={setOpenComments}
               likeNum={article?.liked_count}
               commentNum={article?.comments_count}
+              openComments={openComments}
             />
           ))}
 

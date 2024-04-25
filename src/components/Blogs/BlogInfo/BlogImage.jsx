@@ -1,15 +1,16 @@
 import Image from "next/image";
 
-const BlogImage = ({img}) => {
+const BlogImage = ({ img }) => {
   return (
-    <div className="w-full flex justify-center my-3">
+    <div className="w-full h-[500px] flex justify-center my-3 relative">
       <Image
         src={img}
-        width={700}
-        height={467}
+        fill
         alt="article"
         priority
-        objectFit="cover"
+        objectFit="contain"
+        // layout="fill"
+        style={{ objectFit: "contain" }}
         className="mb-5"
       />
     </div>

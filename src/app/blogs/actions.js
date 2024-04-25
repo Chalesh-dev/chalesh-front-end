@@ -42,7 +42,7 @@ export const fetchSingleArticle = async (slug) => {
     }
     const res = await response.json();
     console.log("res", res);
-    return res;
+    return res.data;
   } catch (error) {
     // console.log(error);
   }
