@@ -88,7 +88,6 @@ const Skeleton = () => {
   const [data, setData] = useState([]);
 
   let page = 1;
-
   async function loadMoreArticles(){
     const next = page + 1;
     const articles = await fetchArticle(next);
